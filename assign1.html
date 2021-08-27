@@ -1,0 +1,45 @@
+<html>
+    <title></title>
+    <head>
+
+    </head>
+    <body>
+        <div style="text-align: center; margin: 50px;">
+            <h1>Counter</h1>
+            <div id="results" style="margin-bottom: 20px;">0</div>
+            <button id="decrease">Decrease</button>
+            <button id="reset">Rest</button>
+            <button id="increase">Increase</button>
+        </div>
+    </body>
+    <script>
+        var decrease = document.querySelector("#decrease");
+        var increase = document.querySelector("#increase");
+        var reset = document.querySelector("#reset");
+
+        decrease.addEventListener("click",desc);
+        increase.addEventListener("click",incr);
+        reset.addEventListener("click",rest);
+
+        function desc(){
+            var res = document.getElementById("results").innerHTML;
+            if(res==0){
+                alert('value is 0');
+            }else{
+                var rest = res-1;
+                document.getElementById("results").innerHTML=rest;
+            }
+        }
+
+        function incr(){
+            var res = document.getElementById("results").innerHTML;
+            var rest = parseInt(res)+1;
+            document.getElementById("results").innerHTML=rest;
+        }
+
+        function rest(){
+            var res = document.getElementById("results").innerHTML=0;
+        }
+    </script>
+</html>
+
